@@ -4,14 +4,18 @@ Working with the `openssl` CLI can be intimidating. Options are hard to remember
 So I've modified these scripts (from [BenMorel/dev-certificates](https://github.com/BenMorel/dev-certificates)) and instructions to make my life, and yours, easier!
 
 ## Download
+```
+git clone git@github.com:pimmerks/self-signed-certificates.git
+```
 
-Right click below, *Save Link As...*:
-
-- [create-ca.sh](https://raw.githubusercontent.com/pimmerks/self-signed-certificates/main/create-ca.sh)
-- [create-certificate.sh](https://raw.githubusercontent.com/pimmerks/self-signed-certificates/main/create-certificate.sh)
+## Before using:
+Create a copy of the `.env.example` file and edit it for your own needs.
+```
+cp .env.example .env
+vim .env
+```
 
 ## Generate your own Certificate Authority
-
 The *Certificate Authority* is what will make your browser trust the certificates that you'll generate for your local domains. Your browser is bundled with a list of Certificate Autorities that it trusts by default, but because you'll be signing your certificates yourself, you need to instruct it to trust your own certificates.
 
 Just run:
